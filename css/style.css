@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --heading: 'Luckiest Guy';
+  --para: 'Roboto';
+  --headColor: #333333;
+  --paraColor: #4d4d4d;
+  --container: #f9f7fe;
+  --gradient: linear-gradient(90deg,#242740,#254592);
+}
+
+body {
+  font-family: var(--para);
+}
+
+.navbar {
+  padding: 1rem 5rem 1rem 0;
+}
+
+.navbar-brand {
+  font-family: var(--heading);
+  font-size: 28px;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  padding: 0 2rem 0 02rem;
+}
+
+.header-area {
+  background: #242740;
+}
+
+.header-area .nav-item .nav-link {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0 0.8rem;
+}
+
+.header-area .navbar-nav .active a {
+  background: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero section starts */
+.hero-page {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#242740), to(#254592));
+  background: linear-gradient(#242740, #254592);
+}
+
+.hero-page .background {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+}
+
+.hero-page .background h1 {
+  position: relative;
+  top: 0;
+  z-index: 0;
+  font-family: var(--heading);
+  font-size: 35vw;
+  color: #1c1e31;
+}
+
+.hero-page .hero-intro {
+  position: relative;
+  top: 20%;
+  left: 10%;
+}
+
+.hero-page .hero-intro .hero-text h2 {
+  font-family: var(--heading);
+  font-size: 52px;
+  color: #fff;
+  margin: 0;
+}
+
+.hero-page .hero-intro .hero-text h3 {
+  font-family: var(--heading);
+  font-size: 6.5rem;
+}
+
+.hero-page .hero-intro .hero-text h3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-page .hero-intro .scroll-img {
+  position: absolute;
+  margin-top: 1%;
+  left: 10%;
+}
+
+.hero-page .hero-intro .scroll-img a:hover {
+  opacity: 0.7;
+}
+
+.hero-page .hero-intro .scroll-img a::before {
+  position: absolute;
+  left: 50%;
+  top: 90px;
+  content: "";
+  width: 1px;
+  height: 160px;
+  background: #fff;
+  display: inline-block;
+}
+
+.hero-page .hero-intro .hero-scroll {
+  position: absolute;
+  color: #fff;
+  -webkit-animation: scroll-animate 10s infinite linear;
+          animation: scroll-animate 10s infinite linear;
+}
+
+@-webkit-keyframes scroll-animate {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes scroll-animate {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+/* Services*/
+.director-wrapper {
+  margin-top: -10%;
+  width: 100%;
+  height: 100vh;
+  padding: 0 6%;
+}
+
+.director-wrapper .director-img {
+  position: absolute;
+  margin-top: -4%;
+  margin-left: -4%;
+  width: 40%;
+  height: 65%;
+}
+
+.director-wrapper .director-img img {
+  border-radius: 5px;
+  height: auto;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.director-wrapper .director-img::before {
+  position: absolute;
+  content: "";
+  background: url("../img/bluedots.png") center center no-repeat;
+  height: 100%;
+  width: 100%;
+  left: 70px;
+  bottom: -90px;
+  max-width: 795px;
+  background-size: 100%;
+  display: block;
+}
+
+.director-wrapper .director-card {
+  width: 100%;
+  height: 35rem;
+  background-image: url("../img/purpbg.jpg");
+  -webkit-box-shadow: -10px 20px 20px #888888;
+          box-shadow: -10px 20px 20px #888888;
+}
+
+.director-wrapper .director-card .director-note {
+  margin-left: 47%;
+  padding: 3% 3%;
+}
+
+.director-wrapper .director-card .director-note h2 {
+  padding: 2rem 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2E9CCA;
+  text-transform: uppercase;
+}
+
+.director-wrapper .director-card .director-note h3 {
+  font-family: var(--heading);
+  letter-spacing: 1px;
+  color: #fefefe;
+  font-size: 4vw;
+}
+
+.director-wrapper .director-card .director-note p {
+  color: #fff;
+  line-height: 36px;
+  font-size: 1rem;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+/* Services */
+.services-wrapper {
+  height: 110vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.services-wrapper .services-container {
+  padding: 6% 3%;
+}
+
+.services-wrapper .services-container h2 {
+  font-size: 4rem;
+  font-family: var(--heading);
+  margin: 0;
+  color: var(--headColor);
+}
+
+.services-wrapper .services-container h3 {
+  font-size: 1.2rem;
+  color: #254592;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.services-wrapper .services-container .services-div {
+  padding: 2% 4%;
+}
+
+.services-wrapper .services-container .services-div .services {
+  text-align: center;
+  margin: 3% 2%;
+  border-radius: 5px;
+  padding: 5% 3%;
+  width: 29%;
+  background: var(--container);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.services-wrapper .services-container .services-div .services img {
+  height: 4rem;
+  padding-bottom: 2%;
+}
+
+.services-wrapper .services-container .services-div .services h4 {
+  padding: 5% 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #254592;
+}
+
+.services-wrapper .services-container .services-div .services p {
+  font-size: 1rem;
+  color: var(--paraColor);
+}
+
+.services-wrapper .services-container .services-div .services:hover {
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 20px #ccc;
+}
+
+.services-wrapper .services-container p {
+  font-size: 1.2rem;
+  color: var(--paraColor);
+}
+
+.services-wrapper .services-container .button-4 {
+  width: 10rem;
+  height: 50px;
+  border: 2px solid #242740;
+  text-transform: uppercase;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-80%);
+          transform: translateX(-80%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 0 40px 50px;
+}
+
+.services-wrapper .services-container .button-4 a {
+  font-size: 12px;
+  font-weight: 600;
+  color: #242740;
+  text-decoration: none;
+  line-height: 50px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.services-wrapper .services-container .eff-4 {
+  width: 10rem;
+  height: 50px;
+  left: -10rem;
+  background: var(--gradient);
+  position: absolute;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 1;
+}
+
+.services-wrapper .services-container .button-4:hover .eff-4 {
+  left: 0;
+}
+
+.services-wrapper .services-container .button-4:hover a {
+  color: #fff;
+}
+
+/* Start Quote  */
+.quote-wrapper {
+  position: absolute;
+  margin: 3% 0;
+  padding: 5% 0;
+  width: 100%;
+}
+
+.quote-wrapper .quote {
+  position: relative;
+  background: var(--container);
+  padding: 10%;
+  text-align: center;
+  width: 100%;
+}
+
+.quote-wrapper .quote p {
+  position: relative;
+  z-index: 1;
+  font-family: var(--heading);
+  font-size: 3.5vw;
+  color: var(--paraColor);
+}
+
+.quote-wrapper .quote::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  background: url(../img/quotes.png) no-repeat center center;
+  content: "";
+  height: 190px;
+  margin-top: -100px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,349 @@
+// 252740,464866,AAABB8,2E9CCA,29648A
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --heading: 'Luckiest Guy';
+    --para: 'Roboto';
+    --headColor: #333333;
+    --paraColor: #4d4d4d;
+    --container: #f9f7fe;
+    --gradient: linear-gradient(90deg,#242740,#254592);
+}
+body{
+    font-family: var(--para);
+}
+.navbar{
+    padding: 1rem 5rem 1rem 0;
+}
+.navbar-brand{
+    font-family: var(--heading);
+    font-size: 28px;
+    font-weight: 100;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    padding: 0 2rem 0 02rem;
+}
+.header-area{
+    background: #242740;
+    .nav-item{
+        .nav-link{
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0 0.8rem;
+        }
+    }
+    .navbar-nav .active a{
+        background: #fff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+
+/* Hero section starts */
+.hero-page{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( #242740,#254592);
+
+    .background{
+        position: absolute;
+        top: 10%;
+        right: 8%;
+
+        h1{
+            position: relative;
+            top: 0;
+            z-index: 0;
+            font-family: var(--heading);
+            font-size: 35vw;
+            color: #1c1e31;
+            // -webkit-text-stroke-width: 2px;
+            // -webkit-text-stroke-color: #fff;
+        }
+    }
+
+    .hero-intro{
+        position: relative;
+        top: 20%;
+        left: 10%;
+
+        .hero-text{
+
+            h2{
+                font-family: var(--heading);
+                font-size: 52px;
+                color: #fff;
+                margin: 0;
+            }
+            h3{
+                font-family: var(--heading);
+                font-size: 6.5rem;
+
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .scroll-img{
+            position: absolute;
+            margin-top: 1%;
+            left: 10%;
+
+            a:hover{
+                opacity: 0.7;
+            }
+
+            a::before{
+                position: absolute;
+                left: 50%;
+                top: 90px;
+                content: "";
+                width: 1px;
+                height: 160px;
+                background: #fff;
+                display: inline-block;
+            }
+        }
+
+        .hero-scroll{
+            position: absolute;
+            color: #fff;
+            animation: scroll-animate 10s infinite linear;
+        }
+
+        @keyframes scroll-animate{
+            0%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+
+/* Services*/
+
+.director-wrapper{
+    margin-top: -10%;
+    width: 100%;
+    height: 100vh;
+    padding: 0 6%;
+
+    .director-img{
+        position: absolute;
+        margin-top: -4%;
+        margin-left: -4%;
+        width: 40%;
+        height: 65%;
+
+        img{
+            border-radius: 5px;
+            height: auto;
+            width: 100%;
+            position: relative;
+            z-index: 5;
+        }
+    }
+    .director-img::before{
+        position: absolute;
+        content: "";
+        background: url("../img/bluedots.png") center center no-repeat;
+        height: 100%;
+        width: 100%;
+        left: 70px;
+        bottom: -90px;
+        max-width: 795px;
+        background-size: 100%;
+        display: block;
+    }
+
+    .director-card{
+        width: 100%;
+        height: 35rem;
+        background-image: url("../img/purpbg.jpg");
+        box-shadow: -10px 20px 20px #888888;
+
+        .director-note{
+            margin-left: 47%;
+            padding: 3% 3%;
+
+            h2{
+                padding: 2rem 0;
+                font-size: 16px;
+                font-weight: 600;
+                color: #2E9CCA;
+                text-transform: uppercase;
+            }
+
+            h3{
+                font-family: var(--heading);
+                letter-spacing: 1px;
+                color: #fefefe;
+                font-size: 4vw;
+            }
+
+            p{
+                color: #fff;
+                line-height: 36px;
+                font-size: 1rem;
+                font-family: "Poppins";
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+
+/* Services */
+
+.services-wrapper{
+    height: 110vh;
+    overflow: hidden;
+    width: 100%;
+
+    .services-container{
+        padding: 6% 3%;
+
+        h2{
+            font-size: 4rem;
+            font-family: var(--heading);
+            margin: 0;
+            color: var(--headColor);
+        }
+
+        h3{
+            font-size: 1.2rem;
+            color: #254592;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .services-div{
+            padding: 2% 4%;
+
+            .services{
+                text-align: center;
+                margin: 3% 2%;
+                border-radius: 5px;
+                padding: 5% 3%;
+                width: 29%;
+                background: var(--container);
+                transition: 0.5s ease;
+
+                img{
+                    height: 4rem;
+                    padding-bottom: 2%;
+                }
+                h4{
+                    padding: 5% 0;
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: #254592;
+                }
+                p{
+                    font-size: 1rem;
+                    color: var(--paraColor);
+                }
+            }
+            .services:hover{
+                -moz-box-shadow: 0 0 5px #ccc;
+                -webkit-box-shadow: 0 0 5px #ccc;
+                box-shadow: 0 0 20px #ccc;
+            }
+        }
+
+        p{
+            font-size: 1.2rem;
+            color: var(--paraColor);
+        }
+
+        .button-4{
+            width:10rem;
+            height:50px;
+            border:2px solid #242740;
+            text-transform: uppercase;
+            float:left;
+            text-align:center;
+            cursor:pointer;
+            position:relative;
+            left: 50%;
+            transform: translateX(-80%);
+            box-sizing:border-box;
+            overflow:hidden;
+            margin:0 0 40px 50px;
+        }
+        .button-4 a{
+            font-size:12px;
+            font-weight: 600;
+            color:#242740;
+            text-decoration:none;
+            line-height:50px;
+            transition:all .5s ease;
+            z-index:2;
+            position:relative;
+        }
+        .eff-4{
+            width:10rem;
+            height:50px;
+            left:-10rem;
+            background:var(--gradient);
+            position:absolute;
+            transition:all .5s ease;
+            z-index:1;
+        }
+        .button-4:hover .eff-4{
+            left:0;
+        }
+        .button-4:hover a{
+         color:#fff;
+        }
+    }
+}
+
+
+/* Start Quote  */
+
+.quote-wrapper{
+    position: absolute;
+    margin: 3% 0;
+    padding: 5% 0;
+    width: 100%;
+
+    .quote{
+        position: relative;
+        background: var(--container);
+        padding: 10%;
+        text-align: center;
+        width: 100%;
+
+        p{
+            position: relative;
+            z-index: 1;
+            font-family: var(--heading);
+            font-size: 3.5vw;
+            color: var(--paraColor);
+        }
+
+        &::before{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            background: url(../img/quotes.png) no-repeat center center;
+            content: "";
+            height: 190px;
+            margin-top: -100px;
+        }
+    }
+}
