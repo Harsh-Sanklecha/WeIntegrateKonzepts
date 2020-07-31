@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
 }
+.row{
+    margin: 0;
+    padding: 0;
+}
 :root{
     --heading: 'Luckiest Guy';
     --para: 'Roboto';
@@ -206,7 +210,6 @@ body{
 /* Services */
 
 .services-wrapper{
-    height: 110vh;
     overflow: hidden;
     width: 100%;
 
@@ -234,25 +237,25 @@ body{
                 text-align: center;
                 margin: 3% 2%;
                 border-radius: 5px;
-                padding: 5% 3%;
+                padding: 3% 3%;
                 width: 29%;
                 background: var(--container);
                 transition: 0.5s ease;
 
                 img{
-                    height: 4rem;
-                    padding-bottom: 2%;
+                    height: 5rem;
+                    padding-bottom: 4%;
                 }
                 h4{
                     padding: 5% 0;
                     margin: 0;
                     text-transform: uppercase;
-                    font-size: 1.2rem;
+                    font-size: 1.3rem;
                     font-weight: 600;
                     color: #254592;
                 }
                 p{
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                     color: var(--paraColor);
                 }
             }
@@ -278,6 +281,7 @@ body{
             cursor:pointer;
             position:relative;
             left: 50%;
+            letter-spacing: 0.2rem;
             transform: translateX(-80%);
             box-sizing:border-box;
             overflow:hidden;
@@ -289,7 +293,7 @@ body{
             color:#242740;
             text-decoration:none;
             line-height:50px;
-            transition:all .5s ease;
+            transition:all .3s ease;
             z-index:2;
             position:relative;
         }
@@ -299,7 +303,7 @@ body{
             left:-10rem;
             background:var(--gradient);
             position:absolute;
-            transition:all .5s ease;
+            transition:all .3s ease;
             z-index:1;
         }
         .button-4:hover .eff-4{
@@ -315,10 +319,20 @@ body{
 /* Start Quote  */
 
 .quote-wrapper{
-    position: absolute;
     margin: 3% 0;
     padding: 5% 0;
     width: 100%;
+
+    &::before{
+        content: "";
+        position: absolute;
+        margin-top: -5%;
+        left: 50%;
+        height: 25%;
+        width: 1px;
+        background: #ccc;
+        display: inline-block;
+    }
 
     .quote{
         position: relative;
@@ -326,6 +340,16 @@ body{
         padding: 10%;
         text-align: center;
         width: 100%;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 90%;
+            height: 25%;
+            width: 1px;
+            background: #ccc;
+            display: inline-block;
+        }
 
         p{
             position: relative;
@@ -344,6 +368,326 @@ body{
             content: "";
             height: 190px;
             margin-top: -100px;
+        }
+    }
+}
+
+
+/* Project works */
+
+.works-wrapper{
+    max-width: 100%;
+    height: 72rem;
+    overflow: hidden;
+    position: relative;
+    padding: 5% 3%;
+
+    .works-container{
+        width: 100%;
+
+        .content-container{
+            padding: 2% 0 ;
+
+            h2{
+                font-family: var(--heading);
+                font-size: 4rem;
+                color: var(--headColor);
+            }
+        }
+
+        .projects{
+            padding: 5% 2%;
+
+            .left-project{
+                margin-top: 10%;
+
+                .dots{
+                    background: url(../img/darkblue.png) center center / 3rem repeat;
+                    content: "";
+                    height: 95%;
+                    right: 20px;
+                    width: 83%;
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -40px;
+                }
+                
+                .image{
+                    width: 30rem;
+                    height: 20rem;
+                    box-shadow: -10px 20px 50px #888;
+                    
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                h5{
+                    position: relative;
+                    text-transform: uppercase;
+                    left: 15%;
+                    top: 35%;
+                    font-weight: 600;
+                    font-family: var(--heading);
+                    letter-spacing: 0.1rem;
+                    color: var(--headColor);
+                    font-size: 2.5rem;
+                }
+                a{
+                    position: absolute;
+                    left: 17%;
+                    top: 31rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                    letter-spacing: 0.1rem;
+                    text-decoration: none;
+                }
+            }
+
+            .right-project{
+                margin-top: -5%;
+
+                .dots{
+                    background: url(../img/darkblue.png) center center / 3rem repeat;
+                    content: "";
+                    height: 60%;
+                    width: 83%;
+                    right: 20px;
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 135px;
+                }
+
+                .image{
+                    width: 30rem;
+                    height: 20rem;
+                    overflow: hidden;
+                    box-shadow: -10px 20px 50px #888;
+
+                    img{
+                        width: 120%;
+                        margin: -10% 0 0 -16%;
+                    }
+                }
+                h5{
+                    position: relative;
+                    text-transform: uppercase;
+                    left: 15%;
+                    top: 23%;
+                    font-family: var(--heading);
+                    color: var(--headColor);
+                    font-size: 2.5rem;
+                }
+
+                a{
+                    position: absolute;
+                    left: 17%;
+                    top: 31rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                    letter-spacing: 0.1rem;
+                    text-decoration: none;
+                }
+            }
+
+            .button-4{
+                width:10rem;
+                height:50px;
+                border:2px solid #242740;
+                text-transform: uppercase;
+                float:left;
+                text-align:center;
+                cursor:pointer;
+                position: relative;
+                left: 50%;
+                top: 10rem;
+                letter-spacing: 0.2rem;
+                transform: translateX(-80%);
+                box-sizing:border-box;
+                overflow:hidden;
+                margin:0 0 40px 50px;
+            }
+            .button-4 a{
+                font-size:12px;
+                font-weight: 600;
+                color:#242740;
+                text-decoration:none;
+                line-height:50px;
+                transition:all .3s ease;
+                z-index:2;
+                position:relative;
+            }
+            .eff-4{
+                width:10rem;
+                height:50px;
+                left:-10rem;
+                background:var(--gradient);
+                position:absolute;
+                transition:all .3s ease;
+                z-index:1;
+            }
+            .button-4:hover .eff-4{
+                left:0;
+            }
+            .button-4:hover a{
+            color:#fff;
+            }
+        }
+    }
+}
+
+
+/* Footer Start */
+
+.footer-area{
+    width: 100%;
+    position: absolute;
+
+    .footer-content{
+        padding: 4%;
+        background: url("../img/purpbg.jpg");
+
+        &::after{
+            position: absolute;
+            content: "";
+            background: url("../img/bluedots.png") center center no-repeat;
+            height: 100%;
+            width: 100%;
+            right: -31rem;
+            bottom: 0px;
+            max-width: 795px;
+            background-size: 100%;
+            display: block;
+        }
+
+        h3{
+            font-family: var(--heading);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            color: #fefefe;
+        }
+
+        span{
+            background: #2E9CCA;
+            height: 1.3px;
+            position: absolute;
+            margin-top: 10px;
+            width: 0px;
+            pointer-events: none;
+            transition: 0.2s linear;
+
+            &:hover{
+                pointer-events: none;
+            }
+        }
+        ul{
+            list-style: none;
+            padding: 1rem 0;
+        }
+        ul li:before{
+            content: "\2022";
+            color: transparent;
+        }
+        li a{
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+            color: #fefefe;
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: lighter;
+            position: absolute;
+            transition: 0.2s linear;
+        }
+        li a:hover{
+            transform: translateX(16px);
+        }
+        li a:hover > span{
+            transform: translateX(-16px);
+            width: 12px;
+        }
+
+        p{
+            text-transform: uppercase;
+            color: #fefefe;
+            margin: 0;
+            font-size: 0.7rem;
+            padding-bottom: 0.4rem;
+            letter-spacing: 0.1rem;
+
+            a{
+                font-size: 0.7rem;
+                color: #2E9CCA;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .contact-us{
+        padding: 0rem 8rem 0 8rem;
+        color: #fefefe;
+        text-transform: uppercase;
+        background: linear-gradient(#242740,#254592);
+
+        &::before{
+            position: absolute;
+            z-index: -1;
+            height: 128%;
+            width: 100%;
+            left: 0rem;
+            top: -28%;
+            content: "";
+            background: #242740;
+        }
+
+        h5{
+            position: absolute;
+            right: 2rem;
+            letter-spacing: 0.5rem;
+            font-family: var(--heading);
+            color: #1c1e31;
+            z-index: 0;
+            font-size: 15rem;
+        }
+        h2{
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            margin: 0;
+        }
+
+        p{
+            position: relative;
+            z-index: 2;
+            text-align: justify;
+            text-justify: auto;
+            letter-spacing: 0.1rem;
+            font-size: 0.9rem;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        h4{
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.1rem;
+            font-size: 0.8rem;
+        }
+
+        input{
+            font-size: 0.7rem;
+            padding: 0.3rem 0.5rem;
+            text-transform: uppercase;
+            margin-top: 2rem;
+            width: 15rem;
+        }
+
+        .btn{
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
         }
     }
 }
