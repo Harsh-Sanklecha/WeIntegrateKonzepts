@@ -76,3 +76,14 @@ function quoteGenerator(){
     document.getElementById('quoteGen').innerHTML = quote[Pick];
 }
 document.addEventListener("load", quoteGenerator());
+
+
+/* Animate on scroll */
+
+AOS.init({
+    offset: 400, // offset (in px) from the original trigger point
+    delay: 2,
+    duration: 1000,
+    once: true, // whether animation should happen only once - while scrolling down
+    mirror: false,
+});

@@ -4,9 +4,8 @@
     margin: 0;
     padding: 0;
 }
-.row{
-    margin: 0;
-    padding: 0;
+html{
+    scroll-behavior: smooth;
 }
 :root{
     --heading: 'Luckiest Guy';
@@ -18,6 +17,10 @@
 }
 body{
     font-family: var(--para);
+}
+.row{
+    margin: 0;
+    padding: 0;
 }
 .navbar{
     padding: 1rem 5rem 1rem 0;
@@ -67,8 +70,22 @@ body{
             font-family: var(--heading);
             font-size: 35vw;
             color: #1c1e31;
-            // -webkit-text-stroke-width: 2px;
-            // -webkit-text-stroke-color: #fff;
+            animation: back-we 2s ease;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: transparent;
+        }
+
+        @keyframes back-we {
+            0%{
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: #fff;
+                color: transparent;
+            }
+            100%{
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: transparent;
+            }
+
         }
     }
 
@@ -78,11 +95,12 @@ body{
         left: 10%;
 
         .hero-text{
+            padding-right: 30rem;
+            color: #fefefe;
 
             h2{
                 font-family: var(--heading);
                 font-size: 52px;
-                color: #fff;
                 margin: 0;
             }
             h3{
@@ -90,9 +108,13 @@ body{
                 font-size: 6.5rem;
 
                 a{
-                    color: #fff;
+                    color: #fefefe;
                     text-decoration: none;
                 }
+            }
+            p{
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
             }
         }
 
@@ -235,6 +257,8 @@ body{
         h3{
             font-size: 1.2rem;
             color: #254592;
+            padding-right: 10rem;
+            line-height: 2rem;
             font-weight: 600;
             text-transform: uppercase;
         }
@@ -393,7 +417,7 @@ body{
     height: 72rem;
     overflow: hidden;
     position: relative;
-    padding: 5% 3%;
+    padding: 0 3%;
 
     .works-container{
         width: 100%;
@@ -750,6 +774,24 @@ body{
 }
 
 @media only screen and (max-width: 990px){
+
+    .navbar{
+        padding-right: 2rem;
+    }
+
+    .navbar-nav{
+        position: relative;
+        text-align: right;
+        z-index: 99;
+    }
+
+    .header-area .nav-item .nav-link {
+        padding: 0.8rem 0;
+    }
+
+    .hero-page .hero-intro .hero-text{
+        padding-right: 5rem;
+    }
     .director-wrapper{
 
         .director-img{
@@ -773,6 +815,9 @@ body{
     }
     .quote-wrapper .quote p{
         font-size: 2rem;
+    }
+    .services-wrapper .services-container h3{
+        padding-right: 0;
     }
     .works-wrapper{
         height: 100rem;
@@ -864,6 +909,10 @@ body{
 
             .hero-text{
 
+                p{
+                    font-size: 0.8rem;
+                }
+                
                 h3{
                     font-size: 3.5rem;
                 }
@@ -871,7 +920,7 @@ body{
 
             .scroll-img{
                 left: 0;
-                bottom: -10rem;
+                bottom: -20rem;
             }
         }
     }

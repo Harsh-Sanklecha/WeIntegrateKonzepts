@@ -21,6 +21,9 @@
     <!-- Favivon -->
     <link rel="shortcut icon" type="image/png" href="img/logo.png">
 
+    <!-- Animate on scroll  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>WE Integrate Konzepts</title>
 </head>
 
@@ -30,7 +33,7 @@
 
     <header class="header-area">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#">WIK</a>
+            <a class="navbar-brand" href="index.html">W.I.K</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,7 +45,7 @@
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Services</a>
@@ -63,7 +66,7 @@
             <h1>we.</h1>
         </div>
         <div class="hero-intro col-lg-12">
-            <div class="hero-text">
+            <div class="hero-text" data-aos="fade-left" data-aos-delay="1300" data-aos-offset="200">
                 <h2>WE are</h2>
                 <h3>
                     <a href="" class="typewrite" data-period="2000"
@@ -72,8 +75,8 @@
                     </a>
                 </h3>
             </div>
-            <div class="scroll-img">
-                <a href="#">
+            <div class="scroll-img" data-aos="flip-left" data-aos-delay="1800" data-aos-offset="200">
+                <a href="#about">
                     <img src="img/scrolldown.png" alt="">
                 </a>
             </div>
@@ -85,30 +88,34 @@
     <!----------------- End Hero section ----------------->
 
     <!-- --------------- Start About ------------------ -->
-
-    <div class="director-wrapper col-lg-12">
-        <div class="director-img">
-            <img src="img/innovation.jpeg" alt="">
-        </div>
-        <div class="director-card">
-            <div class="director-note">
-                <h2>Established on 15th July 2020</h2>
-                <h3>It’s simply about WE not ME.</h3>
-                <p>WEintegrate is a one destination for all the aspiring individuals who can think innovatively to bring
-                    creative ideas,
-                    can invest for innovation or have expertise skills to turn innovative thought to reality.WEintegrate
-                    is not only about us but is about WE all who are having either of the above three things but moving
-                    in
-                    different directions.</p>
+    <section id="about">
+        <div class="director-wrapper col-lg-12" data-aos="fade-up" data-aos-offset="200">
+            <div class="director-img">
+                <img src="img/innovation.jpeg" alt="">
+            </div>
+            <div class="director-card">
+                <div class="director-note">
+                    <h2>Established on 15th July 2020</h2>
+                    <h3>It’s simply about WE not ME.</h3>
+                    <p>WEintegrate is a one destination for all the aspiring individuals who can think innovatively to
+                        bring
+                        creative ideas,
+                        can invest for innovation or have expertise skills to turn innovative thought to
+                        reality.WEintegrate
+                        is not only about us but is about WE all who are having either of the above three things but
+                        moving
+                        in
+                        different directions.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- ---------------End About------------------ -->
 
     <!-- --------------- Start Services --------------- -->
 
     <div class="services-wrapper">
-        <div class="services-container">
+        <div class="services-container" data-aos="fade-up">
             <h2>Services</h2>
             <h3>Three main pillars of our successful business</h3>
             <div class="services-div">
@@ -116,23 +123,23 @@
                     <div class="col-lg-4 col-12  services">
                         <img src="img/creativity.svg" alt="">
                         <h4>Creativist</h4>
-                        <p>A person who has innovative ideas about how to do something.</p>
+                        <p>You have creative[Innovative] mindset.</p>
                     </div>
                     <div class="col-lg-4 col-12 services">
                         <img src="img/profit.svg" alt="">
                         <h4>Capitalist</h4>
-                        <p>An entity/individual that provides financing.</p>
+                        <p>Can invest for Innovation.</p>
                     </div>
                     <div class="col-lg-4 col-12 services">
                         <img src="img/coding.svg" alt="">
                         <h4>Specialist</h4>
-                        <p>Who has special skill, training, knowledge, and ability in their work.</p>
+                        <p>Have skills to turn innovative thought to Reality.</p>
                     </div>
                 </div>
             </div>
-            <div class="button-4">
+            <div class="button-4"> 
                 <div class="eff-4"></div>
-                <a href="#"> know more <i class="fas fa-arrow-right"></i></a>
+                <a href="services.html"> know more <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -142,7 +149,7 @@
     <!-- --------------- Start Quote --------------- -->
 
     <div class="quote-wrapper">
-        <div class="quote">
+        <div class="quote" data-aos="fade-up">
             <p id="quoteGen"></p>
         </div>
     </div>
@@ -152,19 +159,19 @@
     <!-- --------------- Start Upcoming Works --------------- -->
 
     <div class="works-wrapper">
-        <div class="works-container">
+        <div class="works-container" data-aos="fade-up">
             <div class="content-container">
                 <h2>Upcoming Projects...</h2>
             </div>
             <div class="projects">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 left-project">
+                    <div class="col-lg-6 col-md-12 left-project" data-aos="fade-right">
                         <div class="dots"></div>
                         <div class="image"><img src="img/education.jpg" alt=""></div>
                         <h5>Education</h5>
                         <a href="#">view project <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="col-lg-6 col-md-12 right-project">
+                    <div class="col-lg-6 col-md-12 right-project" data-aos="fade-left">
                         <div class="dots"></div>
                         <div class="image"><img src="img/accounting.png" alt=""></div>
                         <h5>Accounting</h5>
@@ -222,8 +229,12 @@
     <!-- Cricluar text JS -->
     <script src="js/circletype.min.js"></script>
 
+    <!-- Animate on scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+
 </body>
 
 </html>
