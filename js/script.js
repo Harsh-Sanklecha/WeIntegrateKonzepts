@@ -60,3 +60,19 @@ window.onload = function () {
 
 
 // new CircleType(document.getElementById('scrollDown'));
+
+
+/* Random quote generator */
+
+function quoteGenerator(){
+    var quote = [
+        'Growth never comes by chance, it is the outcome of efforts taken together.',
+        'Together we are smarter than what we use to be as individuals.',
+        'Dont wait for opportunity, CREATE IT.',
+        'If you want to go fast, go alone.If you want to go far, go together.',
+        'Teamwork simply stated, it is less me more we.'
+    ];
+    var Pick = Math.floor(Math.random() * (quote.length));
+    document.getElementById('quoteGen').innerHTML = quote[Pick];
+}
+document.addEventListener("load", quoteGenerator());
