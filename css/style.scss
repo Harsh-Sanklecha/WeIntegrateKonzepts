@@ -762,7 +762,7 @@ body{
                 margin-left: 0;
 
                 h3{
-                    font-size: 6vw;
+                    font-size: 3.5rem;
                 }
             }
 
@@ -772,12 +772,16 @@ body{
         }
     }
     .quote-wrapper .quote p{
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .works-wrapper{
         height: 100rem;
         
         .works-container{
+
+            .content-container h2{
+                font-size: 3.5rem;
+            }
 
             .projects{
 
@@ -804,7 +808,7 @@ body{
                 }
 
                 .right-project{
-                    margin-top: 10%;
+                    margin-top: 10rem;
 
                     .dots{
                         display: none;
@@ -845,5 +849,51 @@ body{
                 display: none;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .hero-page{
+
+        .background h1{
+            display: none;
+        }
+
+        .hero-intro{
+            padding: 0;
+
+            .hero-text{
+
+                h3{
+                    font-size: 3.5rem;
+                }
+            }
+
+            .scroll-img{
+                left: 0;
+                bottom: -10rem;
+            }
+        }
+    }
+    .services-wrapper .services-container {
+        
+        h2{
+            font-size: 3.5rem;
+        }
+
+        h3{
+            font-size: 1rem;
+        }
+    }
+    .works-wrapper .works-container .projects .left-project a {
+        position: relative;
+        top: 1rem;
+        left: 0;
+    }
+
+    .works-wrapper .works-container .projects .right-project a {
+        position: relative;
+        top: 1rem;
+        left: 0;
     }
 }
