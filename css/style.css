@@ -8,7 +8,7 @@ html {
 }
 
 :root {
-  --heading: 'Luckiest Guy';
+  --heading: 'Montserrat';
   --para: 'Roboto';
   --headColor: #333333;
   --paraColor: #4d4d4d;
@@ -25,21 +25,64 @@ body {
   padding: 0;
 }
 
+.bookmark {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  left: 10%;
+  height: 4rem;
+  width: 5rem;
+}
+
+.bookmark-circle {
+  background-color: #fff;
+  position: absolute;
+  top: 0.6rem;
+  left: 4%;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
 .navbar {
-  padding: 1rem 5rem 1rem 0;
+  padding-right: 2rem;
 }
 
 .navbar-brand {
-  font-family: var(--heading);
-  font-size: 28px;
-  font-weight: 100;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
   color: #fff;
   letter-spacing: 0.1rem;
-  padding: 0 2rem 0 02rem;
+  position: relative;
+  left: 3%;
+  height: 5rem;
+  width: 5rem;
+}
+
+.navbar-brand img {
+  height: 100%;
+  width: 100%;
 }
 
 .header-area {
   background: #242740;
+}
+
+.header-area .nav-item {
+  text-transform: uppercase;
+}
+
+.header-area .nav-item .dropdown-menu {
+  margin: 1rem 0;
+}
+
+.header-area .nav-item .dropdown-menu .dropdown-item {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: var(--paraColor);
 }
 
 .header-area .nav-item .nav-link {
@@ -48,31 +91,33 @@ body {
   padding: 0 0.8rem;
 }
 
-.header-area .navbar-nav .active a {
-  background: #fff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* Hero section starts */
 .hero-page {
-  overflow: hidden;
   width: 100%;
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#242740), to(#254592));
   background: linear-gradient(#242740, #254592);
+  overflow: hidden;
 }
 
 .hero-page .background {
   position: absolute;
-  top: 10%;
+  height: 30rem;
+  width: 30rem;
+  top: 15%;
   right: 8%;
+}
+
+.hero-page .background img {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
 .hero-page .background h1 {
   position: relative;
   top: 0;
+  right: 15rem;
   z-index: 0;
   font-family: var(--heading);
   font-size: 35vw;
@@ -109,24 +154,27 @@ body {
 
 .hero-page .hero-intro {
   position: relative;
-  top: 20%;
-  left: 10%;
+  top: 15%;
+  left: 5%;
 }
 
 .hero-page .hero-intro .hero-text {
-  padding-right: 30rem;
+  padding-right: 10rem;
   color: #fefefe;
 }
 
 .hero-page .hero-intro .hero-text h2 {
-  font-family: var(--heading);
-  font-size: 52px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
   margin: 0;
 }
 
 .hero-page .hero-intro .hero-text h3 {
   font-family: var(--heading);
-  font-size: 6.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 5rem;
 }
 
 .hero-page .hero-intro .hero-text h3 a {
@@ -134,14 +182,26 @@ body {
   text-decoration: none;
 }
 
+.hero-page .hero-intro .hero-text h4 {
+  font-family: var(--heading);
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .hero-page .hero-intro .hero-text p {
-  font-size: 1rem;
+  padding: 2rem 0;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: justify;
+  text-justify: auto;
   letter-spacing: 0.1rem;
 }
 
 .hero-page .hero-intro .scroll-img {
   position: absolute;
-  margin-top: 1%;
+  margin-top: 5%;
   left: 10%;
 }
 
@@ -163,29 +223,27 @@ body {
 .hero-page .hero-intro .hero-scroll {
   position: absolute;
   color: #fff;
-  -webkit-animation: scroll-animate 10s infinite linear;
-          animation: scroll-animate 10s infinite linear;
 }
 
 @-webkit-keyframes scroll-animate {
   0% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes scroll-animate {
   0% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -204,7 +262,7 @@ body {
   height: 65%;
 }
 
-.director-wrapper .director-img img {
+.director-wrapper .director-img video {
   border-radius: 5px;
   height: auto;
   width: 100%;
@@ -258,9 +316,9 @@ body {
 
 .director-wrapper .director-card .director-note h3 {
   font-family: var(--heading);
-  letter-spacing: 1px;
   color: #fefefe;
-  font-size: 4vw;
+  text-transform: uppercase;
+  font-size: 3rem;
 }
 
 .director-wrapper .director-card .director-note p {
@@ -269,6 +327,56 @@ body {
   font-size: 1rem;
   font-family: "Poppins";
   font-weight: 400;
+}
+
+.director-wrapper .director-card .director-note .button-4 {
+  width: 15rem;
+  height: 55px;
+  border: 2px solid #254592;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  letter-spacing: 0.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.director-wrapper .director-card .director-note .button-4 a {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fefefe;
+  text-decoration: none;
+  line-height: 50px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.director-wrapper .director-card .director-note .eff-4 {
+  width: 15rem;
+  height: 55px;
+  left: -15rem;
+  background: var(--gradient);
+  position: absolute;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  z-index: 1;
+}
+
+.director-wrapper .director-card .director-note .button-4:hover .eff-4 {
+  left: 0;
+}
+
+.director-wrapper .director-card .director-note .button-4:hover a {
+  color: #fff;
+}
+
+.director-wrapper .director-card .director-note i {
+  margin-left: 1rem;
 }
 
 /* Services */
@@ -282,16 +390,17 @@ body {
 }
 
 .services-wrapper .services-container h2 {
-  font-size: 4rem;
+  font-size: 3rem;
+  padding: 2rem 0 0 0;
   font-family: var(--heading);
   margin: 0;
-  color: var(--headColor);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .services-wrapper .services-container h3 {
   font-size: 1.2rem;
   color: #254592;
-  padding-right: 10rem;
   line-height: 2rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -299,6 +408,7 @@ body {
 
 .services-wrapper .services-container .services-div {
   padding: 2% 4%;
+  font-family: var(--para);
 }
 
 .services-wrapper .services-container .services-div .services {
@@ -327,8 +437,10 @@ body {
 }
 
 .services-wrapper .services-container .services-div .services p {
+  text-align: center;
   font-size: 1.1rem;
   color: var(--paraColor);
+  padding: 0;
 }
 
 .services-wrapper .services-container .services-div .services:hover {
@@ -337,8 +449,13 @@ body {
 }
 
 .services-wrapper .services-container p {
+  line-height: 2rem;
+  padding: 0 0 2rem 0;
   font-size: 1.2rem;
   color: var(--paraColor);
+  text-align: justify;
+  text-justify: auto;
+  margin: 0;
 }
 
 .services-wrapper .services-container .button-4 {
@@ -398,25 +515,12 @@ body {
 /* Start Quote  */
 .quote-wrapper {
   margin: 3% 0;
-  padding: 5% 0;
   width: 100%;
-}
-
-.quote-wrapper::before {
-  content: "";
-  position: absolute;
-  margin-top: -5%;
-  left: 50%;
-  height: 25%;
-  width: 1px;
-  background: #ccc;
-  display: inline-block;
 }
 
 .quote-wrapper .quote {
   position: relative;
   overflow: hidden;
-  background: var(--container);
   padding: 10%;
   text-align: center;
   width: 100%;
@@ -454,7 +558,7 @@ body {
 /* Project works */
 .works-wrapper {
   max-width: 100%;
-  height: 72rem;
+  height: 82rem;
   overflow: hidden;
   position: relative;
   padding: 0 3%;
@@ -465,13 +569,21 @@ body {
 }
 
 .works-wrapper .works-container .content-container {
-  padding: 2% 0;
+  padding: 3% 0;
 }
 
 .works-wrapper .works-container .content-container h2 {
   font-family: var(--heading);
-  font-size: 4rem;
+  text-transform: uppercase;
+  font-size: 3rem;
   color: var(--headColor);
+}
+
+.works-wrapper .works-container .content-container p {
+  font-size: 1rem;
+  color: var(--headColor);
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
 }
 
 .works-wrapper .works-container .projects {
@@ -514,13 +626,23 @@ body {
   font-family: var(--heading);
   letter-spacing: 0.1rem;
   color: var(--headColor);
-  font-size: 2.5rem;
+  font-size: 1.7rem;
+}
+
+.works-wrapper .works-container .projects .left-project p {
+  position: absolute;
+  left: 17%;
+  top: 30.5rem;
+  font-size: 1rem;
+  text-align: justify;
+  text-justify: auto;
+  letter-spacing: 0.1rem;
 }
 
 .works-wrapper .works-container .projects .left-project a {
   position: absolute;
   left: 17%;
-  top: 31rem;
+  top: 40.5rem;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.8rem;
@@ -561,8 +683,8 @@ body {
 }
 
 .works-wrapper .works-container .projects .right-project .image img {
-  width: 120%;
-  margin: -10% 0 0 -16%;
+  width: 108%;
+  margin: 0;
 }
 
 .works-wrapper .works-container .projects .right-project h5 {
@@ -572,13 +694,23 @@ body {
   top: 23%;
   font-family: var(--heading);
   color: var(--headColor);
-  font-size: 2.5rem;
+  font-size: 1.7rem;
+}
+
+.works-wrapper .works-container .projects .right-project p {
+  position: absolute;
+  left: 17%;
+  top: 30.5rem;
+  font-size: 1rem;
+  text-align: justify;
+  text-justify: auto;
+  letter-spacing: 0.1rem;
 }
 
 .works-wrapper .works-container .projects .right-project a {
   position: absolute;
   left: 17%;
-  top: 31rem;
+  top: 36rem;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.8rem;
@@ -598,6 +730,7 @@ body {
 }
 
 .works-wrapper .works-container .projects .button-4 {
+  display: none;
   width: 15rem;
   height: 55px;
   border: 2px solid #242740;
@@ -607,7 +740,7 @@ body {
   cursor: pointer;
   position: relative;
   left: 50%;
-  top: 10rem;
+  top: 15rem;
   letter-spacing: 0.2rem;
   -webkit-transform: translateX(-80%);
           transform: translateX(-80%);
@@ -652,6 +785,158 @@ body {
   color: #fff;
 }
 
+.motivational-quotes-wrapper {
+  margin: 4rem 0;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.motivational-quotes-wrapper .inside-quotes {
+  padding: 2rem 0;
+}
+
+.motivational-quotes-wrapper .motivational-quotes .quote-text {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  background-color: var(--container);
+}
+
+.motivational-quotes-wrapper .motivational-quotes .quote-text h5 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  font-family: var(--heading);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--paraColor);
+}
+
+.motivational-quotes-wrapper .motivational-quotes .quote-text::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  background: url(../img/quotes.png) no-repeat center center;
+  content: "";
+  height: 190px;
+  margin-top: -100px;
+}
+
+.motivational-quotes-wrapper .motivational-quotes .quote-img {
+  width: 100%;
+  height: 30rem;
+}
+
+.motivational-quotes-wrapper .motivational-quotes .quote-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Team details */
+.team-wrapper {
+  width: 100%;
+  background: url("../img/purpbg.jpg");
+  padding: 2rem;
+  margin-bottom: 10rem;
+}
+
+.team-wrapper .team-details {
+  overflow: hidden;
+}
+
+.team-wrapper .team-details h2 {
+  text-align: center;
+  font-family: var(--heading);
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #fefefe;
+  padding: 2rem 0;
+}
+
+.team-wrapper .team-details .row {
+  padding: 3rem 0;
+}
+
+.team-wrapper .team-details .team-img {
+  overflow: hidden;
+}
+
+.team-wrapper .team-details .team-img .image {
+  padding: 2rem 0;
+}
+
+.team-wrapper .team-details .team-img .image img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.team-wrapper .team-details .team-content {
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  color: #fefefe;
+}
+
+.team-wrapper .team-details .team-content h5 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  color: #2E9CCA;
+}
+
+.team-wrapper .team-details .team-content h3 {
+  font-family: var(--heading);
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.team-wrapper .team-details .team-content p {
+  text-align: justify;
+  text-justify: auto;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
+/* Vision  , Mission */
+.vision {
+  background: url("../img/purpbg.jpg");
+  padding: 2rem;
+  color: #fefefe;
+  margin-bottom: 10rem;
+}
+
+.vision h2 {
+  font-family: var(--heading);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+
+.vision p {
+  line-height: 2rem;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  text-align: justify;
+  text-justify: auto;
+  margin: 0;
+}
+
+.vision ul {
+  padding: 0 2rem;
+}
+
+.vision ul li {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
 /* Footer Start */
 .footer-area {
   width: 100%;
@@ -678,59 +963,38 @@ body {
 
 .footer-area .footer-content h3 {
   font-family: var(--heading);
-  font-size: 2.2rem;
-  text-transform: uppercase;
+  font-size: 2rem;
   color: #fefefe;
 }
 
-.footer-area .footer-content span {
-  background: #2E9CCA;
-  height: 1.3px;
-  position: absolute;
-  margin-top: 10px;
-  width: 0px;
-  pointer-events: none;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+.footer-area .footer-content .social-media {
+  padding: 2rem 0;
 }
 
-.footer-area .footer-content span:hover {
-  pointer-events: none;
+.footer-area .footer-content .social-media .icon {
+  margin-right: 0.8rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #fefefe;
+  border-radius: 50%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-.footer-area .footer-content ul {
-  list-style: none;
-  padding: 1rem 0;
-}
-
-.footer-area .footer-content ul li:before {
-  content: "\2022";
-  color: transparent;
-}
-
-.footer-area .footer-content li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-weight: 600;
+.footer-area .footer-content .social-media .icon i {
+  position: relative;
+  top: 40%;
+  left: 30%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   color: #fefefe;
-  font-size: 13px;
-  line-height: 20px;
-  font-weight: lighter;
-  position: absolute;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+  width: 100%;
 }
 
-.footer-area .footer-content li a:hover {
-  -webkit-transform: translateX(16px);
-          transform: translateX(16px);
-}
-
-.footer-area .footer-content li a:hover > span {
-  -webkit-transform: translateX(-16px);
-          transform: translateX(-16px);
-  width: 12px;
+.footer-area .footer-content .social-media .icon:hover {
+  background-color: #2E9CCA;
+  cursor: pointer;
+  border: 1px solid #2E9CCA;
 }
 
 .footer-area .footer-content p {
@@ -779,9 +1043,9 @@ body {
 }
 
 .footer-area .contact-us h2 {
-  font-size: 1.5rem;
+  font-family: var(--heading);
+  font-size: 1.7rem;
   font-weight: 600;
-  letter-spacing: 0.1rem;
   margin: 0;
 }
 
@@ -845,6 +1109,9 @@ body {
     text-align: right;
     z-index: 99;
   }
+  .hero-page .background {
+    display: none;
+  }
   .header-area .nav-item .nav-link {
     padding: 0.8rem 0;
   }
@@ -858,7 +1125,7 @@ body {
     margin-left: 0;
   }
   .director-wrapper .director-card .director-note h3 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   .director-wrapper .director-card::after {
     display: none;
@@ -870,10 +1137,10 @@ body {
     padding-right: 0;
   }
   .works-wrapper {
-    height: 100rem;
+    height: 110rem;
   }
   .works-wrapper .works-container .content-container h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   .works-wrapper .works-container .projects .left-project {
     margin-top: 0;
@@ -890,6 +1157,7 @@ body {
     left: 0;
   }
   .works-wrapper .works-container .projects .left-project a {
+    top: 100%;
     left: 1rem;
   }
   .works-wrapper .works-container .projects .right-project {
@@ -907,7 +1175,7 @@ body {
     left: 0;
   }
   .works-wrapper .works-container .projects .right-project a {
-    top: 31.5rem;
+    top: 100%;
     left: 1rem;
   }
   .footer-area .footer-content::after {
@@ -935,27 +1203,45 @@ body {
     font-size: 0.8rem;
   }
   .hero-page .hero-intro .hero-text h3 {
-    font-size: 3.5rem;
+    font-size: 2rem;
+  }
+  .hero-page .hero-intro .hero-text h4 {
+    font-size: 2.5rem;
   }
   .hero-page .hero-intro .scroll-img {
     left: 0;
     bottom: -20rem;
   }
+  .motivational-quotes-wrapper {
+    padding: 2rem 0;
+  }
   .services-wrapper .services-container h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   .services-wrapper .services-container h3 {
     font-size: 1rem;
   }
+  .vision h2 {
+    font-size: 2.5rem;
+  }
+  .works-wrapper {
+    height: 80rem;
+  }
   .works-wrapper .works-container .projects .left-project a {
     position: relative;
-    top: 1rem;
+    top: 2rem;
     left: 0;
   }
   .works-wrapper .works-container .projects .right-project a {
     position: relative;
-    top: 1rem;
+    top: 2rem;
     left: 0;
+  }
+  .team-wrapper {
+    padding: 1rem;
+  }
+  .team-wrapper .team-details h2 {
+    font-size: 2.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

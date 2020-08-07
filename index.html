@@ -19,10 +19,14 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Favivon -->
-    <link rel="shortcut icon" type="image/png" href="img/logo.png">
+    <link rel="shortcut icon" type="image/png" href="img/logo-final.png">
 
     <!-- Animate on scroll  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Slick carousel -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
     <title>WE Integrate Konzepts</title>
 </head>
@@ -30,10 +34,11 @@
 <body>
 
     <!----------------- Start Nav Bar ----------------->
-
+    <div class="bookmark"></div>
+    <div class="bookmark-circle"></div>
     <header class="header-area">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="index.html">W.I.K</a>
+        <nav class="navbar navbar-expand-lg navbar-dark" >
+            <a class="navbar-brand" href="index.html"><img src="img/logo-final.png" alt="">&nbsp; WEIntegrate Konzepts Pvt Ltd</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,14 +49,22 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
+                    <li class="nav-item dropdown">
+                        <a a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="services.html">about company</a>
+                            <a class="dropdown-item" href="team.html">about promoters</a>
+                            <a class="dropdown-item" href="#">about team</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#projects">products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSep5Y9XFevuqzyvvVefvpPmuNb66y3HsYCJnrHS8dncUtChig/viewform" target="__blank">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc_rYo8IeH6dKxCOeTeScLGSrEqD95T5_yVZOoQA6H4SryEpg/viewform" target="__blank">Register</a>
                     </li>
                 </ul>
             </div>
@@ -63,94 +76,169 @@
     <!----------------- Start Hero section ----------------->
     <div class="hero-page">
         <div class="background">
-            <h1>we.</h1>
+            <img src="img/team-work.png" data-aos="fade-left">
+            <!-- <h1>we.</h1> -->
         </div>
         <div class="hero-intro col-lg-12">
-            <div class="hero-text" data-aos="fade-left" data-aos-delay="1300" data-aos-offset="200">
-                <h2>WE are</h2>
+            <div class="hero-text" data-aos="fade-right" data-aos-delay="700">
+                <h2>Are you a</h2>
                 <h3>
                     <a href="" class="typewrite" data-period="2000"
-                        data-type='[ "Creativist", "Capitalist", "specialist"]'>
+                        data-type='[ "Creativist ?", "Capitalist ?", "specialist ?"]'>
                         <span class="wrap"></span>
                     </a>
                 </h3>
             </div>
-            <div class="scroll-img" data-aos="flip-left" data-aos-delay="1800" data-aos-offset="200">
+            <div class="scroll-img" data-aos="flip-up" data-aos-offset="0" data-aos-delay="1200">
                 <a href="#about">
                     <img src="img/scrolldown.png" alt="">
                 </a>
             </div>
-            <!-- <div class="hero-scroll" id="scrollDown">
-                    <h5>SEE-FOR-YOURSELF-</h5>
-                </div> -->
+
+            <!-- <a href="#about" class="scrol">
+            <div class="hero-scroll" id="scrollDown">
+                    <h5> IF - YES - SCROLL -</h5>
+                </div></a> -->
         </div>
     </div>
     <!----------------- End Hero section ----------------->
 
     <!-- --------------- Start About ------------------ -->
     <section id="about">
-        <div class="director-wrapper col-lg-12" data-aos="fade-up" data-aos-offset="200">
+        <div class="director-wrapper col-lg-12" data-aos="fade-up">
             <div class="director-img">
-                <img src="img/innovation.jpeg" alt="">
+                <video src="img/intro.mp4" autoplay muted controls loop></video>
             </div>
             <div class="director-card">
                 <div class="director-note">
-                    <h2>Established on 15th July 2020</h2>
+                    <h2>WEintegrate is a launch pad for turning ideas into business.</h2>
                     <h3>It’s simply about WE not ME.</h3>
-                    <p>WEintegrate is a one destination for all the aspiring individuals who can think innovatively to
+                    <p>WEintegrate is a one destination for all the aspiring individuals <br> who can think innovatively to
                         bring
-                        creative ideas,
-                        can invest for innovation or have expertise skills to turn innovative thought to
-                        reality.WEintegrate
-                        is not only about us but is about WE all who are having either of the above three things but
-                        moving
-                        in
-                        different directions.</p>
+                        creative ideas, <br>
+                        who can invest for innovation, <br> who have expertise skills to turn innovative thought into
+                        reality.</p>
+                        <div class="button-4">
+                            <div class="eff-4"></div>
+                            <a href="services.html"> know more <i class="fas fa-arrow-right"></i></a>
+                        </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- ---------------End About------------------ -->
 
-    <!-- --------------- Start Services --------------- -->
+    <!-- --------------- Start Quote --------------- -->
 
-    <div class="services-wrapper">
-        <div class="services-container" data-aos="fade-up">
-            <h2>Services</h2>
-            <h3>Three main pillars of our successful business</h3>
-            <div class="services-div">
+    <!-- <div class="quote-wrapper">
+        <div class="quote" data-aos="fade-up">
+            <p id="quoteGen"></p>
+        </div>
+    </div> -->
+
+    <div class="motivational-quotes-wrapper">
+        <div class="inside-quotes" data-aos="fade-up">
+            <div class="motivational-quotes">
                 <div class="row">
-                    <div class="col-lg-4 col-12  services">
-                        <img src="img/creativity.svg" alt="">
-                        <h4>Creativist</h4>
-                        <p>You have creative[Innovative] mindset.</p>
+                    <div class="col-lg-5 quote-text">
+                        <h5>Growth never come by chance, It’s an outcome of efforts taken together.</h5>
                     </div>
-                    <div class="col-lg-4 col-12 services">
-                        <img src="img/profit.svg" alt="">
-                        <h4>Capitalist</h4>
-                        <p>Can invest for Innovation.</p>
-                    </div>
-                    <div class="col-lg-4 col-12 services">
-                        <img src="img/coding.svg" alt="">
-                        <h4>Specialist</h4>
-                        <p>Have skills to turn innovative thought to Reality.</p>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 1.jpg" alt="">
                     </div>
                 </div>
             </div>
-            <div class="button-4"> 
-                <div class="eff-4"></div>
-                <a href="services.html"> know more <i class="fas fa-arrow-right"></i></a>
+            <div class="motivational-quotes">
+                <div class="row">
+                    <div class="col-lg-5 quote-text">
+                        <h5>No one can whistle a symphony. It takes a whole orchestra to play it.</h5>
+                    </div>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 2.jpg" alt="">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <!-- --------------- End Services --------------- -->
-
-    <!-- --------------- Start Quote --------------- -->
-
-    <div class="quote-wrapper">
-        <div class="quote" data-aos="fade-up">
-            <p id="quoteGen"></p>
+            <div class="motivational-quotes">
+                <div class="row">
+                    <div class="col-lg-5 quote-text">
+                        <h5>Coming together is beginning, staying together is progress and working together is Success.</h5>
+                    </div>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="motivational-quotes">
+                <div class="row">
+                    <div class="col-lg-5 quote-text">
+                        <h5>No matter how brilliant your mind or strategy, if you’re playing a solo game, you’ll always lose out to a
+                        Team.</h5>
+                    </div>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="motivational-quotes">
+                <div class="row">
+                    <div class="col-lg-5 quote-text">
+                        <h5>Great things in business are never done by one person; they’re done by team of people.</h5>
+                    </div>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="motivational-quotes">
+                <div class="row">
+                    <div class="col-lg-5 quote-text">
+                        <h5>Reaching far requires moving together.</h5>
+                    </div>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="motivational-quotes">
+                <div class="row">
+                    <div class="col-lg-5 quote-text">
+                        <h5>it’s simply about WE not ME.</h5>
+                    </div>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 7.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="motivational-quotes">
+                <div class="row">
+                    <div class="col-lg-5 quote-text">
+                        <h5>Individually you are a drop, together WE are ocean</h5>
+                    </div>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 8.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="motivational-quotes">
+                <div class="row">
+                    <div class="col-lg-5 quote-text">
+                        <h5>I Can’t, But WE can</h5>
+                    </div>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 9.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="motivational-quotes">
+                <div class="row">
+                    <div class="col-lg-5 quote-text">
+                        <h5>Together WE are Smarter than Individuals.</h5>
+                    </div>
+                    <div class="col-lg-7 quote-img">
+                        <img src="img/quotes/Quote 10.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -158,24 +246,30 @@
 
     <!-- --------------- Start Upcoming Works --------------- -->
 
-    <div class="works-wrapper">
-        <div class="works-container" data-aos="fade-up">
+    <div class="works-wrapper" id="projects">
+        <div class="works-container">
             <div class="content-container">
-                <h2>Upcoming Projects...</h2>
+                <h2>Upcoming Products...</h2>
+                <p>Whether you are looking for reliable task management application to streamline your business management procedures or
+                creative design/development works to intensify your business activities on the web, we assure that – irrespective of how
+                much intricate or minor your requisites are - you’ll have a very rewarding experience with our wide-ranging, cost
+                effective products.</p>
             </div>
             <div class="projects">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 left-project" data-aos="fade-right">
+                    <div class="col-lg-6 col-md-12 left-project">
                         <div class="dots"></div>
                         <div class="image"><img src="img/education.jpg" alt=""></div>
-                        <h5>Education</h5>
-                        <a href="#">view project <i class="fas fa-arrow-right"></i></a>
+                        <h5>learning</h5>
+                        <p>A platform where your knowledge and skills are enriched, to make you more competitive.</p>
+                        <!-- <a href="#">view project <i class="fas fa-arrow-right"></i></a> -->
                     </div>
-                    <div class="col-lg-6 col-md-12 right-project" data-aos="fade-left">
+                    <div class="col-lg-6 col-md-12 right-project">
                         <div class="dots"></div>
-                        <div class="image"><img src="img/accounting.png" alt=""></div>
-                        <h5>Accounting</h5>
-                        <a href="#">view project <i class="fas fa-arrow-right"></i></a>
+                        <div class="image"><img src="img/management.jpg" alt=""></div>
+                        <h5>management</h5>
+                        <p>An application for managing your business process, work flow in much easier way than never before, at your finger tips.</p>
+                        <!-- <a href="#">view project <i class="fas fa-arrow-right"></i></a> -->
                     </div>
                 </div>
                 <div class="button-4">
@@ -188,29 +282,41 @@
 
     <!-- --------------- End Upcoming Works --------------- -->
 
+    
+   
     <!-- --------------- Start Footer --------------- -->
 
     <footer class="footer-area">
         <div class="footer-container">
             <div class="d-flex row">
                 <div class="col-lg-5 footer-content">
-                    <h3>We Integrate Konzepts</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/weintegrate.konzepts.7" target="__blank"> <span></span>
-                                Facebook</a></li>
-                        <li><a href="https://www.instagram.com/weintegratekonzepts/" target="__blank"> <span></span>
-                                Instagram</a></li>
-                    </ul>
+                    <h3>WEintegrate Konzepts</h3>
+                    <div class="social-media row">
+                        <div class="icon">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="icon">
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="icon">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="icon">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="icon">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                     <p>© Copyright WEIntegrateKonzepts. All rights reserved.</p>
                     <p>A concept by <a href="#"> Harsh Sanklecha </a></p>
                 </div>
                 <div class="col-lg-7 contact-us">
-                    <h5>we.</h5>
                     <h2>Get In Touch</h2>
-                    <p>Address-8-2-248/7 & 10 /2A, Uma Chambers Near Nagarjuna Circle, Punjagutta Hyderabad Hyderabad,
-                        Telangana- 500082 India</p>
-                    <h4><a href="weintegratekonzepts@gmail.com">weintegratekonzepts@gmail.com</a></h4>
-                    <h4><a href="tel:+91-81069 57503">+91-81069 57503</a></h4>
+                    <p>Address-8-2-248/7 & 10 /2A, Uma Chambers, Near Nagarjuna Circle, Punjagutta, Hyderabad,
+                        Telangana- 500082, India</p>
+                    <h4><a href="mailto:connect@weintegratekonzepts.com">connect@weintegratekonzepts.com</a></h4>
+                    <h4><a href="tel:+91-81069 57503">+91-810 695 7503</a></h4>
                     <input type="text" placeholder="Enter your email here">
                     <button class="btn btn-dark btn-sm">Subscribe</button>
                 </div>
@@ -231,6 +337,9 @@
 
     <!-- Animate on scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- slick -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
