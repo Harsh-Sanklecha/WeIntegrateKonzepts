@@ -22,25 +22,20 @@ body{
     margin: 0;
     padding: 0;
 }
-.bookmark{
-    display: none;
-    background-color: #fff;
-    position: absolute;
-    left: 10%;
-    height: 4rem;
-    width: 5rem;
-}
-.bookmark-circle{
-    background-color: #fff;
-    position: absolute;
-    top: 0.6rem;
-    left: 4%;
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-}
 .navbar{
     padding-right : 2rem;
+}
+.navbar-brand-mobile{
+    display:none;
+    position: relative;
+    left: 3%;
+    height: 5rem;
+    width: 6.5rem;
+
+    img{
+        height: 100%;
+        width: 100%;
+    }
 }
 .navbar-brand{
     letter-spacing: 0.1rem;
@@ -51,8 +46,8 @@ body{
     letter-spacing: 0.1rem;
     position: relative;
     left: 3%;
-    height: 5rem;
-    width: 5rem;
+    height: 6rem;
+    width: 7rem;
 
     img{
         height: 100%;
@@ -144,7 +139,7 @@ body{
         left: 5%;
 
         .hero-text{
-            padding-right: 10rem;
+            padding-right: 10%;
             color: #fefefe;
 
             h2{
@@ -555,7 +550,7 @@ body{
         }
 
         .projects{
-            padding: 5% 2%;
+            padding: 5% 0;
 
             .left-project{
                 margin-top: 10%;
@@ -644,7 +639,8 @@ body{
                     box-shadow: -10px 20px 50px #888;
 
                     img{
-                        width: 108%;
+                        width: 100%;
+                        height: 100%;
                         margin: 0;
                     }
                 }
@@ -1057,11 +1053,15 @@ body{
 
 
 @media only screen and (max-width: 990px){
-
+    .navbar-brand-mobile{
+        display: block;
+    }
     .navbar{
         padding-right: 2rem;
     }
-
+    .navbar-brand {
+        display: none;
+    }
     .navbar-nav{
         position: relative;
         text-align: right;
@@ -1075,7 +1075,7 @@ body{
     }
 
     .hero-page .hero-intro .hero-text{
-        padding-right: 5rem;
+        padding-right: auto;
     }
     .director-wrapper{
 
@@ -1132,6 +1132,10 @@ body{
                         left: 0;
                     }
 
+                    p{
+                        top: 110%;
+                        left: 1rem;
+                    }
                     a{
                         top: 100%;
                         left: 1rem;
@@ -1155,6 +1159,10 @@ body{
                         left: 0;
                     }
 
+                    p{
+                        top: 110%;
+                        left: 1rem;
+                    }
                     a{
                         top: 100%;
                         left: 1rem;
@@ -1184,6 +1192,20 @@ body{
 }
 
 @media only screen and (max-width: 425px){
+    .bookmark-circle{
+        display: none;
+    }
+    .navbar-brand {
+        left: 1%;
+
+        img{
+            display: none;
+        }
+
+        a{
+            font-size: 0.1rem;
+        }
+    }
     .hero-page{
 
         .background h1{
@@ -1246,8 +1268,14 @@ body{
     }
     .team-wrapper{
         padding: 1rem;
-            .team-details h2{
-            font-size: 2.5rem;
+            .team-details{
+
+                .team-content{
+                    padding: 1rem;
+                } 
+                h2{
+                font-size: 2.5rem;
+                }
         }
     } 
 }
