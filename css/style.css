@@ -1162,6 +1162,8 @@ body {
     display: none;
   }
   .works-wrapper .works-container .projects .left-project .image {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     width: 100%;
     height: 80%;
   }
@@ -1184,6 +1186,8 @@ body {
     display: none;
   }
   .works-wrapper .works-container .projects .right-project .image {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     width: 100%;
     height: 80%;
   }
