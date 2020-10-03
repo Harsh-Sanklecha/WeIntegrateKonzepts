@@ -1,6 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  outine: none;
+}
+
+*:focus{
+outline: none;
 }
 
 html {
